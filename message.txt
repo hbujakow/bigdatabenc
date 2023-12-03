@@ -1,0 +1,348 @@
+    1  ls
+    2  /vagrant/scripts/copy-to-local.sh
+    3  ls /vagrant/scripts/
+    4  /vagrant/scripts/copy-to-local.sh
+    5  ls
+    6  less scripts/setup-hive.sh
+    7  hive
+    8  exit
+    9  ls /vagrant/scripts/
+   10  cat /vagrant/scripts/setup-hadoop.sh
+   11  cat scripts/setup-hadoop.sh
+   12  cat scripts/setup-hive.sh
+   13  cat /vagrant/scripts/setup-hadoop.sh
+   14  cp -R scripts/ /vagrant
+   15  sudo cp -R scripts/ /vagrant
+   16  cat /vagrant/scripts/setup-hive.sh
+   17  exit
+   18  sudo apt-get install python3-gdbm
+   19  sudo su
+   20  su testuser
+   21  ls
+   22  clear
+   23  hdfs getconf -confKey dfs.webhdfs.enabled
+   24  sudo ./scripts/bootstrap.sh
+   25  hdfs getconf -confKey dfs.webhdfs.enabled
+   26  w
+   27  ls
+   28  sudo ./scripts/bootstrap.sh
+   29  man hadoop
+   30  hadoop fs -ls /
+   31  vim siema.txt
+   32  ls
+   33  less siema.txt
+   34  hadoop fs -ls /
+   35  hdfs dfs -df -h
+   36  ll
+   37  wc -l siema.txt
+   38  sudo apt-get install python3-gdbm
+   39  hdfs dfs -du -h /home/vagrant/
+   40  hadoop fs -ls /home/
+   41  hadoop fs -ls /
+   42  hadoop fs -ls /user
+   43  sudo mv /usr/local/apache-tez-0.9.1-bin/lib/slf4j* /home/vagrant/
+   44  hadoop fs -ls /user
+   45  hadoop fs -ls /
+   46  hadoop --version
+   47  hadoop fs -mkdir /user/vagrant
+   48  hadoop fs -ls /user
+   49  hadoop fs -copyFromLocal siema.txt /user/vagrant
+   50  hadoop fs -ls /user/vagrant
+   51  hadoop fs -cat /user/vagrant/siema.txt
+   52  hadoop fs -ls /user/vagrant
+   53  hadoop fs -mkdir /user/vagrant/input
+   54  hadoop fs -copyFromLocal siema.txt /user/vagrant/input
+   55  ls
+   56  mkdir test
+   57  ls
+   58  hadoop fs -moveToLocal /user/vagrant/input .
+   59  hadoop fs -copyToLocal /user/vagrant/input .
+   60  ls
+   61  cd input/
+   62  ls
+   63  cd ..
+   64  hadoop fs -ls /user/vagrant/siema.txt
+   65  hadoop fs -cat /user/vagrant/siema.txt | head -n 10
+   66  hdfs getconf -confKey dfs.permissions.superusergroup
+   67  sudo addgroup testgroup
+   68  sudo adduser --ingroup testgroup testuser
+   69  sudo vi /usr/local/hadoop-2.7.6/etc/hadoop/hdfs-site.xml
+   70  hdfs dfsadmin -refreshNodes
+   71  su testuser
+   72  sudo su
+   73  su testuser
+   74  sudo ./scripts/bootstrap.sh
+   75  hdfs getconf -confKey dfs.webhdfs.enabled
+   76  curl -i localhost:50070/webhdfs/v1/user?op=LISTSTATUS
+   77  hdfs getconf -confKey dfs.namenode.http-address
+   78  curl -i localhost:50070/webhdfs/v1/user?op=GETFILESTATUS
+   79  curl -i localhost:50070/webhdfs/v1/user?op=GETCONTENTSUMMARY
+   80  curl -i localhost:50070/webhdfs/v1/user/vagrant?op=GETCONTENTSUMMARY
+   81  vi /usr/local/hadoop/etc/hadoop/hdfs-site.xml
+   82  sudo vi /usr/local/hadoop/etc/hadoop/hdfs-site.xml
+   83  sudo /usr/local/hadoop/sbin/stop-dfs.sh
+   84  sudo /usr/local/hadoop/sbin/start-dfs.sh
+   85  curl -X PUT
+   86  "<IP/host>:50070/webhdfs/v1/user/vagrant/restdir?&op=MKDIRS"
+   87  curl -X PUT localhost:50070/webhdfs/v1/user/vagrant/rest?&op=MKDIRS"
+   88  curl -X PUT "localhost:50070/webhdfs/v1/user/vagrant/rest?&op=MKDIRS"
+   89  curl -X PUT localhost:50070/webhdfs/v1/user/vagrant/rest?&op=MKDIRS
+   90  curl -i localhost:50070/webhdfs/v1/user/vagrant?op=GETCONTENTSUMMARY
+   91  curl -i localhost:50070/webhdfs/v1/user/vagrant/rest?op=GETFILESTATUS
+   92  hadoop fs -ls /user/vagrant
+   93  sudo ./scripts/bootstrap.sh
+   94  history
+   95  hive
+   96  beeline
+   97  ls
+   98  ls scripts/
+   99  ls
+  100  mkdir labyyy
+  101  cd labyyy/
+  102  ls
+  103  vim scripcik.hql
+  104  ls
+  105  hive -S -f scripcik.hql
+  106  hive
+  107  ls
+  108  clear
+  109  vim scripcik.hql
+  110  hive -S -f scripcik.hql
+  111  hive --v
+  112  ps -aux | grep -i 'Hive'
+  113  man grep
+  114  hive -S -f scripcik.hql
+  115  hive
+  116  ls
+  117  ls -l
+  118  vim skrypt2.hql
+  119  ls
+  120  vim skrypt2.hql
+  121  hive -S -f skrypt2.hql
+  122  hive
+  123  hive -e 'LOAD DATA LOCAL INPATH wifi_waw.csv'
+  124  vim skrypt2.hql
+  125  hive -e 'LOAD DATA LOCAL INPATH wifi_waw.csv overwrite into table wifi;
+  126  hive -e 'LOAD DATA LOCAL INPATH wifi_waw.csv overwrite into table wifi;'
+  127  vim skrypt2.hql
+  128  pwd
+  129  hive -S -f skrypt2.hql
+  130  vim skrypt2.hql
+  131  hive -S -f skrypt2.hql
+  132  vim skrypt2.hql
+  133  hive -S -f skrypt2.hql
+  134  history | grep hdfs
+  135  hdfs dfs -du -h /home/vagrant/
+  136  hdfs dfs -du -h
+  137  hadoop fs -ls /user/hive/warehouse
+  138  hdfs fs -ls
+  139  hdfs -ls
+  140  hdfs
+  141  hdfs dfs -ls
+  142  hadoop fs -ls /user/hive/warehouse
+  143  hdfs dfs -ls /user/hive/warehouse
+  144  hdfs dfs -ls /
+  145  hive
+  146  ls
+  147  hadoop fs -put trams.csv /user/hbujakow
+  148  hadoop fs -ls
+  149  hadoop fs -ls /user/
+  150  hadoop fs -ls /user/hbujakow
+  151  ls
+  152  cd ..
+  153  ls
+  154  cd labyyy/
+  155  ls
+  156  mv aaa.txt aaa.hql
+  157  ls
+  158  hive -S -f aaa.hql
+  159  vim aaa.hql
+  160  hadoop fs -ls /user/hbujakow
+  161  hadoop fs -ls /user/hbujakow/
+  162  hadoop fs --put trams.csv /user/hbujakow
+  163  vim aaa.hql
+  164  hive -S -f aaa.hql
+  165  ls
+  166  vim aaa.hql
+  167  hadoop fs -ls /user/hbujakow/
+  168  hadoop fs -rm -r -f /user/hbujakow
+  169  hadoop fs -put trams.csv /user/hbujakow
+  170  hive -f aaa.hql
+  171  vim a
+  172  vim aaa.hql
+  173  vim asdfasdf.hql
+  174  hive -f asdfasdf.hql
+  175  sudo ./scripts/bootstrap.sh
+  176  hsdb
+  177  history
+  178  hadoop fs -ls /
+  179  hadoop fs -ls /home/vagrant]
+  180  hadoop fs -ls /home/vagrant
+  181  hadoop fs -ls /user
+  182  hadoop fs -mkdir /user/nifi_in
+  183  hadoop fs -mkdir /user/nifi_out
+  184  hadoop fs -ls /user
+  185  ls
+  186  mkdir nifi
+  187  cd ..
+  188  ls
+  189  cd vagrant/
+  190  ls
+  191  ls labyyy/
+  192  cp labyyy/trams.csv nifi/
+  193  ls
+  194  cd nifi/
+  195  ls
+  196  mkdir input
+  197  cd ..
+  198  cd nifi/
+  199  mv trams.csv input/
+  200  ls
+  201  cd input/
+  202  ls
+  203  date
+  204  ls
+  205  cd ..
+  206  cp labyyy/trams.csv nifi/input/
+  207  ls nifi/input/
+  208  hadoop fs -ls /user/nifi_in
+  209  cp labyyy/trams.csv nifi/input/
+  210  ls nifi/input/
+  211  hadoop fs -ls /user/nifi_in
+  212  cp labyyy/trams.csv nifi/input/
+  213  hadoop fs -ls /user/nifi_in
+  214  cp labyyy/trams.csv nifi/input/
+  215  hadoop fs -ls /user/nifi_in
+  216  hadoop fs -ls /user/nifi_out
+  217  hadoop fs -ls /user/nifi_in
+  218  cp labyyy/trams.csv nifi/input/
+  219  hadoop fs -ls /user/nifi_in
+  220  hadoop fs -ls /user/nifi_out
+  221  hadoop fs -ls /user/nifi_in
+  222  cp labyyy/trams.csv nifi/input/
+  223  hadoop fs -ls /user/nifi_out
+  224  cp labyyy/trams.csv nifi/input/
+  225  hadoop fs -ls /user/nifi_in
+  226  hadoop fs -rm trams.csv /user/nifi_in
+  227  hadoop fs -ls /user/nifi_in
+  228  hadoop fs -rm /user/nifi_in/trams.csv
+  229  hadoop fs -ls /user/nifi_in
+  230  cp labyyy/trams.csv nifi/input/
+  231  hadoop fs -ls /user/nifi_in
+  232  ls
+  233  nifi -v
+  234  exit
+  235  sudo ./scripts/bootstrap.sh
+  236  history
+  237  nifi --version
+  238  history
+  239  hadoop fs -ls /user/nifi_out
+  240  hadoop fs -ls /user/nifi_out/14e783a6-9abf-45e5-8bf0-e5e16d3e5870
+  241  hadoop fs -cta /user/nifi_out/14e783a6-9abf-45e5-8bf0-e5e16d3e5870
+  242  hadoop fs -cat /user/nifi_out/14e783a6-9abf-45e5-8bf0-e5e16d3e5870
+  243  hadoop fs -ls /user/nifi_out
+  244  hadoop fs -rmdir /user/nifi_out/*
+  245  hadoop fs -rmdir -r /user/nifi_out/*
+  246  hadoop fs -rmr /user/nifi_out/*
+  247  hadoop fs -ls /user/nifi_out
+  248  hadoop fs -cat /user/nifi_out
+  249  hadoop fs -ls /user/nifi_out
+  250  hadoop fs -cat /user/nifi_out/cats.csv
+  251  hadoop fs -rmr /user/nifi_out/cats.csv
+  252  hadoop fs -ls /user/nifi_out
+  253  hadoop fs -cat /user/nifi_out/cats.csv
+  254  hadoop fs -nano /user/nifi_out/cats.csv
+  255  hadoop fs -rmr /user/nifi_out/cats.csv
+  256  ls
+  257  cd nifi/
+  258  ls
+  259  cd input/
+  260  ls
+  261  touch cats.csv
+  262  vim cats.csv
+  263  ls
+  264  hadoop fs -ls /user/nifi_out
+  265  hadoop fs -cat /user/nifi_out/cats.csv
+  266  ls
+  267  exit
+  268  sudo ./scripts/bootstrap.sh
+  269  hadoop fs -ls
+  270  hadoop fs -mkdir sparklabs
+  271  hadoop fs -ls
+  272  hadoop fs -ls /
+  273  hadoop fs -ls /data
+  274  hadoop fs -ls /hive
+  275  hadoop fs -ls /user
+  276  hadoop fs -ls /user/vagrant
+  277  hadoop fs -ls /user/vagrant/sparklabs
+  278  cd sparklabs/
+  279  ls
+  280  unzip MAR15.zip
+  281  hadoop fs -put MAR15.csv /user/vagrant/sparklabs
+  282  hadoop fs -put  /user/vagrant/sparklabs
+  283  hadoop fs -ls /user/vagrant/sparklabs
+  284  /usr/local/spark
+  285  cd /usr/local/spark
+  286  bin/spark-shell
+  287  pyspark
+  288  pyspark --master local[2]
+  289  ls
+  290  cd
+  291  l
+  292  cd input/
+  293  ls
+  294  cat siema.txt
+  295  history | grep hadoop
+  296  ls
+  297  touch file1.py
+  298  vim file1.py
+  299  spark-submit --master local[2] file1.py
+  300  ls
+  301  hadoop fs -ls
+  302  hadoop fs -cat siemaoutput.cnt
+  303  hadoop fs -cat /user/vagrant/siemaoutput.cnt
+  304  hadoop fs -ls /user/vagrant/siemaoutput.cnt
+  305  hadoop fs -cat /user/vagrant/siemaoutput.cnt/part-00000
+  306  vim file2abel.py
+  307  hadoop fs -put file2abel.py sparklabs
+  308  hadoop fs -ls sparklabs
+  309  spark-submit --master local[2] file2abel.py
+  310  vim ~/.bashrc
+  311  curl https://bootstrap.pypa.io/get-pip.py | python3.9
+  312  pip install jupyter
+  313  sudo apt-get install libffi-dev
+  314  pip install findspark
+  315  jupyter notebook --generate-config
+  316  pip install urllib3==1.26.6
+  317  jupyter notebook --generate-config
+  318  vim  /home/vagrant/.jupyter/jupyter_notebook_config.py
+  319  sudo /vagrant/scripts/bootstrap.sh
+  320  jupyter notebook --no-browser --port 8889
+  321  sudo ufw allow 8889
+  322  jupyter notebook --no-browser --port 8889
+  323  ls
+  324  ls
+  325  cd
+  326  ls
+  327  cd sparklabs/
+  328  ls
+  329  ll
+  330  ls
+  331  mv NYPD_Arrest_Data__Year_to_Date__20231121.csv data.csv
+  332  ls
+  333  hadoop fs -put data.csv /user/vagrant/sparklabs
+  334  hadoop fs -ls /user/vagrant/sparklabs
+  335  ls
+  336  hadoop fs -ls /user/vagrant/sparklabs
+  337  hadoop fs -rmdir output.parquet
+  338  hadoop fs -rmdir sparklabs/output.parquet
+  339  hadoop fs -rmr sparklabs/output.parquet
+  340  hadoop fs -ls /user/vagrant/sparklabs
+  341  sudo ./scripts/bootstrap.sh
+  342  jupyter notebook --no-browser --port 8889
+  343  hadoop fs -rmr sparklabs/output.parquet
+  344  hadoop fs -ls /user/vagrant/sparklabs
+  345  w
+  346  sudo ./scripts/bootstrap.sh
+  347  history
+  348  ls
